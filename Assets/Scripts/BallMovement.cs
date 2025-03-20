@@ -32,7 +32,7 @@ public class BallMovement : MonoBehaviour
             messageText.text = ""; // เริ่มต้นข้อความว่าง
 
         if (scoreText != null)
-            scoreText.text = "0/" + totalTargets; // ตั้งค่าเริ่มต้นเป็น "0/5"
+            scoreText.text = "0/" + totalTargets + " ลูก"; // ตั้งค่าเริ่มต้นเป็น "0/5"
 
         // ล็อกเมาส์ตอนเริ่ม
         Cursor.lockState = CursorLockMode.Locked;
@@ -107,6 +107,9 @@ public class BallMovement : MonoBehaviour
 
                     // ทำลาย target เมื่อชน
                     Destroy(collision.gameObject);
+
+                    if (messageText != null)
+                    messageText.text = "0/5 ลูก";
 
                     // อัปเดตข้อความบน UI เพื่อแสดงจำนวนที่ชนแล้ว
                     if (scoreText != null)
