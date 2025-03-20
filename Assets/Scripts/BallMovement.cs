@@ -13,11 +13,12 @@ public class BallMovement : MonoBehaviour
     private Rigidbody rb;
     private bool canJump = true;
 
-    private int totalTargets = 5;         // จำนวนวัตถุเป้าหมาย (แก้เป็น 5)
-    private int currentHits = 0;
+    private int totalTargets = 5;         // จำนวนวัตถุเป้าหมาย
+    private int currentHits = 0;          // จำนวนที่ลูกบอลชนแล้ว
     private bool[] hitFlags;
 
-    public Text messageText;
+    public Text messageText;  // ข้อความที่จะแสดง
+    public Text scoreText;    // ข้อความที่แสดงจำนวน target ที่ถูกชน
 
     private bool isGameOver = false;      // เพิ่มตัวแปรเช็คว่าเกมจบหรือยัง
 
@@ -29,6 +30,9 @@ public class BallMovement : MonoBehaviour
 
         if (messageText != null)
             messageText.text = ""; // เริ่มต้นข้อความว่าง
+
+        if (scoreText != null)
+            scoreText.text = "0/" + totalTargets; // ตั้งค่าเริ่มต้นเป็น "0/5"
 
         // ล็อกเมาส์ตอนเริ่ม
         Cursor.lockState = CursorLockMode.Locked;
@@ -101,6 +105,14 @@ public class BallMovement : MonoBehaviour
 
                     Debug.Log("ชน " + targetTag + " แล้ว!");
 
+                    // ทำลาย target เมื่อชน
+                    Destroy(collision.gameObject);
+
+                    // อัปเดตข้อความบน UI เพื่อแสดงจำนวนที่ชนแล้ว
+                    if (scoreText != null)
+                        scoreText.fontSize = 40;
+                        scoreText.text = currentHits + "/" + totalTargets + " ลูก";
+
                     if (currentHits == totalTargets)
                     {
                         Debug.Log("ชนครบ 5 อันแล้ว!");
@@ -112,11 +124,14 @@ public class BallMovement : MonoBehaviour
     }
 
     void GameOver()
-    {
+    { 
         isGameOver = true;
 
         // ปลดล็อกเมาส์
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // โหลดฉาก GameOverScene โดยอัตโนมัติ
+        SceneManager.LoadScene("GameOverScene");  // เปลี่ยนชื่อฉากเป็นชื่อของหน้า Game Over
     }
 }
