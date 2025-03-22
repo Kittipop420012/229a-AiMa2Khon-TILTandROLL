@@ -1516,7 +1516,8 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8158194209722490727, guid: 7699f5af06713974ba61777a8a830f6e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2251602365534867338, guid: 7699f5af06713974ba61777a8a830f6e, type: 3}
@@ -3603,7 +3604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d06c26e9d62ded44b061c82cb17e8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
+  rotationSpeed: 30
 --- !u!114 &275806170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6419,7 +6420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da11fc9ead1b35d4db65a04f44469cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 17
+  moveSpeed: 15
   jumpForce: 13
   jumpCooldown: 1
   cameraTransform: {fileID: 330585546}
@@ -10339,6 +10340,8 @@ GameObject:
   - component: {fileID: 818940244}
   - component: {fileID: 818940243}
   - component: {fileID: 818940242}
+  - component: {fileID: 818940247}
+  - component: {fileID: 818940246}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Target2
@@ -10435,6 +10438,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1154187235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &818940246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818940241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d14b64294b0d024789b554f8609be44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objRenderer: {fileID: 818940243}
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  glowSpeed: 2
+--- !u!114 &818940247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818940241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d06c26e9d62ded44b061c82cb17e8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 30
 --- !u!1 &821860234
 GameObject:
   m_ObjectHideFlags: 0
@@ -17925,6 +17956,8 @@ GameObject:
   - component: {fileID: 1429143016}
   - component: {fileID: 1429143015}
   - component: {fileID: 1429143014}
+  - component: {fileID: 1429143019}
+  - component: {fileID: 1429143018}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Target4
@@ -18021,6 +18054,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1154187235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1429143018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429143013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d14b64294b0d024789b554f8609be44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objRenderer: {fileID: 1429143015}
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  glowSpeed: 2
+--- !u!114 &1429143019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429143013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d06c26e9d62ded44b061c82cb17e8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 30
 --- !u!1 &1438444532
 GameObject:
   m_ObjectHideFlags: 0
@@ -18033,6 +18094,8 @@ GameObject:
   - component: {fileID: 1438444535}
   - component: {fileID: 1438444534}
   - component: {fileID: 1438444533}
+  - component: {fileID: 1438444538}
+  - component: {fileID: 1438444537}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Target3
@@ -18129,6 +18192,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1154187235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1438444537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438444532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d14b64294b0d024789b554f8609be44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objRenderer: {fileID: 1438444534}
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  glowSpeed: 2
+--- !u!114 &1438444538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438444532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d06c26e9d62ded44b061c82cb17e8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 30
 --- !u!1001 &1438515371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24415,6 +24506,8 @@ GameObject:
   - component: {fileID: 1898096507}
   - component: {fileID: 1898096506}
   - component: {fileID: 1898096505}
+  - component: {fileID: 1898096510}
+  - component: {fileID: 1898096509}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Target5
@@ -24511,6 +24604,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1154187235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898096509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898096504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d14b64294b0d024789b554f8609be44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objRenderer: {fileID: 1898096506}
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  glowSpeed: 2
+--- !u!114 &1898096510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898096504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d06c26e9d62ded44b061c82cb17e8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 30
 --- !u!1001 &1911128586
 PrefabInstance:
   m_ObjectHideFlags: 0
