@@ -9,11 +9,11 @@ public class GotoGameIn : MonoBehaviour
 
     void Start()
     {
-        Gamein.onClick.AddListener(GameinI);
+        Gamein.onClick.AddListener(Gotogame);
     }
 
     // Update is called once per frame
-    void GameinI()
+    void Gotogame()
     {
         SceneManager.LoadScene("Game");  // เปลี่ยนชื่อ "MainScene" เป็นชื่อของฉากหลักที่คุณต้องการให้โหลด
     }
