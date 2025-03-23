@@ -20,6 +20,9 @@ public class BallMovement : MonoBehaviour
     public Text messageText;  // ข้อความที่จะแสดง
     public Text scoreText;    // ข้อความที่แสดงจำนวน target ที่ถูกชน
 
+    private float timer = 0f;   // ตัวจับเวลา
+    public Text timerText;      // UI แสดงเวลา
+    private bool isGameActive = true;  // เช็คว่าเกมยังเล่นอยู่ไหม
     private bool isGameOver = false;      // เพิ่มตัวแปรเช็คว่าเกมจบหรือยัง
 
     void Start()
@@ -54,6 +57,15 @@ public class BallMovement : MonoBehaviour
             Jump();
             StartCoroutine(JumpCooldown());
         }
+
+        if (isGameActive)
+        {
+            timer += Time.deltaTime; // เพิ่มเวลาตามเวลาที่ผ่านไป
+             if (timerText != null)
+                {
+                timerText.text = "Time: " + timer.ToString("F2") + "s"; // แสดงเวลาใน UI
+                }
+        }   
     }
 
     void Move()
@@ -126,13 +138,24 @@ public class BallMovement : MonoBehaviour
         }
     }
 
+
+
+
     void GameOver()
     { 
+
         isGameOver = true;
 
         // ปลดล็อกเมาส์
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        isGameActive = false; // หยุดจับเวลา
+
+        PlayerPrefs.SetFloat("FinalTime", timer);
+        PlayerPrefs.Save();
+        
+        Debug.Log("เวลาที่ใช้: " + timer.ToString("F2") + " วินาที");
 
         // โหลดฉาก GameOverScene โดยอัตโนมัติ
         SceneManager.LoadScene("GameOverScene");  // เปลี่ยนชื่อฉากเป็นชื่อของหน้า Game Over
