@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // สำหรับโหลด Scene ใหม่
+using UnityEngine.SceneManagement; 
 
 public class BallMovement : MonoBehaviour
 {
@@ -13,17 +13,17 @@ public class BallMovement : MonoBehaviour
     private Rigidbody rb;
     private bool canJump = true;
 
-    private int totalTargets = 5;         // จำนวนวัตถุเป้าหมาย
-    private int currentHits = 0;          // จำนวนที่ลูกบอลชนแล้ว
+    private int totalTargets = 5;         
+    private int currentHits = 0;          
     private bool[] hitFlags;
 
-    public Text messageText;  // ข้อความที่จะแสดง
-    public Text scoreText;    // ข้อความที่แสดงจำนวน target ที่ถูกชน
+    public Text messageText;  
+    public Text scoreText;    
 
-    private float timer = 0f;   // ตัวจับเวลา
-    public Text timerText;      // UI แสดงเวลา
-    private bool isGameActive = true;  // เช็คว่าเกมยังเล่นอยู่ไหม
-    private bool isGameOver = false;      // เพิ่มตัวแปรเช็คว่าเกมจบหรือยัง
+    private float timer = 0f;   
+    public Text timerText;      
+    private bool isGameActive = true;  
+    private bool isGameOver = false;      
 
     void Start()
     {
@@ -37,7 +37,7 @@ public class BallMovement : MonoBehaviour
         if (scoreText != null)
             scoreText.text = "0/" + totalTargets; // ตั้งค่าเริ่มต้นเป็น "0/5"
 
-        // ล็อกเมาส์ตอนเริ่ม
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -46,7 +46,7 @@ public class BallMovement : MonoBehaviour
     {
         if (isGameOver)
         {
-            // ถ้าเกมจบแล้วไม่ให้ทำอะไรต่อ
+            
             return;
         }
 
@@ -150,7 +150,7 @@ public class BallMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        isGameActive = false; // หยุดจับเวลา
+        isGameActive = false; 
 
         PlayerPrefs.SetFloat("FinalTime", timer);
         PlayerPrefs.Save();
