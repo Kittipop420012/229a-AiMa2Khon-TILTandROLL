@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public Text timeText;  // เชื่อมกับ UI Text ใน Game Over Scene
@@ -18,5 +18,11 @@ public class GameOverManager : MonoBehaviour
         else
             timeText.text = "Your Time: " + finalTime.ToString("F2") + "s";
     }
+
+    Invoke("LoadNextScene", 5f);
 }
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene("Credit"); // เปลี่ยนชื่อเป็นชื่อฉากที่ต้องการ
+    }
 }

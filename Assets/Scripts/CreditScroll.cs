@@ -6,7 +6,7 @@ public class CreditScroll : MonoBehaviour
 
     void Start()
     {
-        // ให้รอ 10 วินาที แล้วเปลี่ยนฉาก
+        
         Invoke("LoadNextScene", 40f);
     }
     void Update()
@@ -16,6 +16,6 @@ public class CreditScroll : MonoBehaviour
 
     void LoadNextScene()
     {
-        SceneManager.LoadScene("NextScene"); // เปลี่ยนชื่อเป็นชื่อฉากที่ต้องการ
+        SceneManager.LoadScene("Menu"); // เปลี่ยนชื่อเป็นชื่อฉากที่ต้องการ
     }
 }
