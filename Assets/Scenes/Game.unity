@@ -2826,7 +2826,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -6288,7 +6288,6 @@ GameObject:
   - component: {fileID: 444100690}
   - component: {fileID: 444100694}
   - component: {fileID: 444100696}
-  - component: {fileID: 444100695}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -6413,18 +6412,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &444100695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 444100689}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99c4c373cb3de0d4988e2a98e05e06db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &444100696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13320,7 +13307,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 96a341108ee50d64cb3032043506de55, type: 3}
   m_Resource: {fileID: 8300000, guid: 96a341108ee50d64cb3032043506de55, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.221
+  m_Volume: 0.035
   m_Pitch: 1
   Loop: 0
   Mute: 0

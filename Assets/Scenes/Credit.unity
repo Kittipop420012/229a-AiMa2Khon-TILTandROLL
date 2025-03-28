@@ -348,9 +348,9 @@ MonoBehaviour:
     Uttawat\n1660501402 \u0E40\u0E25\u0E02\u0E17\u0E35\u0E48 14\n\u0E2B\u0E19\u0E49\u0E32\u0E17\u0E35\u0E48\n\r\u0E17\u0E33\u0E23\u0E39\u0E1BUi\u0E40\u0E01\u0E21
     \u0E2D\u0E2D\u0E01\u0E41\u0E1A\u0E1A\u0E01\u0E32\u0E23\u0E40\u0E25\u0E48\u0E19
     \u0E19\u0E33\u0E1F\u0E34\u0E2A\u0E34\u0E01\u0E21\u0E32\u0E43\u0E0A\u0E49\u0E43\u0E19\u0E40\u0E01\u0E21\n\nMusic
-    by: Composer Name\n\n\u0E2D\u0E49\u0E32\u0E07\u0E2D\u0E34\u0E07  Assets \u0E1F\u0E23\u0E35\nApartment
-    KiT\n\rBrick Project Studio\n\nOffice Supplies Low Poly\nSten Ulfsson\n\nQA Books\nQAtmo\n\nRolling
-    Balls Sci-fi Pack Free\ngameVgames\n\nPxiel Art 2D: AI Pixel Art Generator\n\nSpecial
+    by: Suno AI\nPxiel Art 2D: AI Pixel Art Generator\n\n\u0E2D\u0E49\u0E32\u0E07\u0E2D\u0E34\u0E07 
+    Assets Free\nApartment KiT\n\rBrick Project Studio\n\nOffice Supplies Low Poly\nSten
+    Ulfsson\n\nQA Books\nQAtmo\n\nRolling Balls Sci-fi Pack Free\ngameVgames\n\nSpecial
     Thanks:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ae0f5cdc117a0fc4abb3d720c0556b3f, type: 2}
@@ -645,12 +645,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
