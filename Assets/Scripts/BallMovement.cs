@@ -32,10 +32,10 @@ public class BallMovement : MonoBehaviour
         hitFlags = new bool[totalTargets];
 
         if (messageText != null)
-            messageText.text = ""; // เริ่มต้นข้อความว่าง
+            messageText.text = ""; 
 
         if (scoreText != null)
-            scoreText.text = "0/" + totalTargets; // ตั้งค่าเริ่มต้นเป็น "0/5"
+            scoreText.text = "0/" + totalTargets; 
 
         
         Cursor.lockState = CursorLockMode.Locked;
@@ -60,10 +60,10 @@ public class BallMovement : MonoBehaviour
 
         if (isGameActive)
         {
-            timer += Time.deltaTime; // เพิ่มเวลาตามเวลาที่ผ่านไป
+            timer += Time.deltaTime; 
              if (timerText != null)
                 {
-                timerText.text = "Time: " + timer.ToString("F2") + "s"; // แสดงเวลาใน UI
+                timerText.text = "Time: " + timer.ToString("F2") + "s"; 
                 }
         }   
     }
@@ -146,7 +146,7 @@ public class BallMovement : MonoBehaviour
 
         isGameOver = true;
 
-        // ปลดล็อกเมาส์
+        
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
@@ -157,7 +157,7 @@ public class BallMovement : MonoBehaviour
         
         Debug.Log("เวลาที่ใช้: " + timer.ToString("F2") + " วินาที");
 
-        // โหลดฉาก GameOverScene โดยอัตโนมัติ
+        
         SceneManager.LoadScene("GameOverScene");  // เปลี่ยนชื่อฉากเป็นชื่อของหน้า Game Over
     }
 }
